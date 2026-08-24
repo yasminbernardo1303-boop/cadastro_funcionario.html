@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Funcionário</title>
+</head>
+<body>
+
+    <h1>Cadastro de Funcionários</h1>
+
+    <form action="" method="POST">
+        <fieldset>
+            <legend>Dados do Funcionário</legend>
+
+            <table width="600" cellpadding="8">
+                <tr>
+                    <td colspan="2">
+                        <h3>Informações Pessoais e Profissionais</h3>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="nome">Nome Completo:</label></td>
+                    <td><input type="text" id="nome" name="nome" required minlength="3"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="cpf">CPF:</label></td>
+                    <td><input type="text" id="cpf" name="cpf" required maxlength="14"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">E-mail:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="telefone">Telefone:</label></td>
+                    <td>
+                        <input type="tel" id="telefone" name="telefone">
+                        <label for="nascimento">Data de Nasc.:</label>
+                        <input type="date" id="nascimento" name="nascimento" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="cargo">Cargo:</label></td>
+                    <td><input type="text" id="cargo" name="cargo" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="salario">Salário:</label></td>
+                    <td><input type="number" id="salario" name="salario" min="1400" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="setor">Setor:</label></td>
+                    <td>
+                        <select id="setor" name="setor" required>
+                            <option value="">Selecione...</option>
+                            <option value="ti">TI</option>
+                            <option value="rh">Recursos Humanos</option>
+                            <option value="financeiro">Financeiro</option>
+                            <option value="vendas">Vendas</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Turno:</label></td>
+                    <td>
+                        <input type="radio" id="manha" name="turno" value="manha" required>
+                        <label for="manha">Manhã</label>
+
+                        <input type="radio" id="tarde" name="turno" value="tarde">
+                        <label for="tarde">Tarde</label>
+
+                        <input type="radio" id="noite" name="turno" value="noite">
+                        <label for="noite">Noite</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="contrato">Tipo de Contrato:</label></td>
+                    <td>
+                        <select id="contrato" name="contrato" required>
+                            <option value="">Selecione...</option>
+                            <option value="clt">CLT</option>
+                            <option value="pj">PJ</option>
+                            <option value="estagio">Estágio</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Conhecimentos:</label></td>
+                    <td>
+                        <input type="checkbox" id="html" name="conhecimentos" value="html">
+                        <label for="html">HTML</label>
+
+                        <input type="checkbox" id="css" name="conhecimentos" value="css">
+                        <label for="css">CSS</label>
+
+                        <input type="checkbox" id="js" name="conhecimentos" value="js">
+                        <label for="js">JavaScript</label>
+
+                        <input type="checkbox" id="sql" name="conhecimentos" value="sql">
+                        <label for="sql">SQL</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="obs">Observações:</label></td>
+                    <td><textarea id="obs" name="obs" rows="4" cols="30"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="termos" name="termos" required>
+                        <label for="termos">Aceito os termos de cadastro</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Cadastrar</button>
+                        <button type="reset">Limpar</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+</html>
